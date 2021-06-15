@@ -5,9 +5,9 @@ const database = new Sequelize(
   process.env.BD_USER,
   process.env.BD_PASSWORD,
   {
-    host: 'localhost',
+    host: process.env.BD_HOST,
     dialect: 'mysql',
-    port: '3306'
+    port: process.env.BD_PORT
   })
 
 module.exports = database

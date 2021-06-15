@@ -31,7 +31,6 @@ exports.registerUser = async (req, res) => {
     req.flash('correct', 'Enviamos un correo, confirma tu cuenta')
     res.redirect('/login')
   } catch (error) {
-    console.log(error)
     req.flash('error', error.errors.map(error => error))
     res.render('Register', {
       namePage: 'Registrarse',
@@ -44,15 +43,12 @@ exports.registerUser = async (req, res) => {
 
 exports.confirmAccount = async (req, res) => {
   const email = req.params.email
-  console.log(`\n\n ${email} \n\n`)
 
   const user = await Users.findOne({
     where: {
       email
     }
   })
-
-  console.log(`\n\n ${user} \n\n`)
 
   user.active = 1
   await user.save()
