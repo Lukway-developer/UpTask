@@ -1,0 +1,30 @@
+body{
+  height: 100%;
+  background: linear-gradient(105deg, #29BB89 -3%, #1E6F5C 103%);
+  color: white;
+  font: 400 1rem 'Nunito', sans-serif;
+  text-align: center;
+}
+h2{
+  text-align: center;
+  font: bold 3rem 'Nunito', sans-serif;
+}
+a{
+  width: fit-content;
+  height: 50px;
+  margin: 30px auto;
+  outline: unset;
+  border: unset;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: #F9F050;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15), 0px 5px 0px #E6DD3B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #212121;
+  font: bold 1rem 'Nunito', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,0 +1,42 @@
+.login{
+  &_container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(105deg, #29BB89 -3%, #1E6F5C 103%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form{
+      padding: 0;
+      .second_label{
+        margin-top: 20px;
+      }
+      .button{
+        margin: 0;
+      }
+    }
+    .button_container{
+      margin-top: 40px;
+      padding: unset;
+      align-items: flex-end;
+    }
+  }
+  &_card{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &_title{
+    height: 40px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      height: 125%;
+      margin-left: 15px;
+    }
+  }
+
+}

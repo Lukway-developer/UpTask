@@ -1,0 +1,55 @@
+{
+  "name": "UpTask",
+  "version": "1.0.0",
+  "description": "Project Management Tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "run": "concurrently \" npm run dev \" \" npm run watch \"",
+    "dev": "nodemon ./index.js",
+    "watch": "webpack --watch --mode development"
+  },
+  "keywords": [],
+  "author": "Lucas Matias Ojeda de Sousa <lukway.developer@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt-nodejs": "0.0.3",
+    "concurrently": "^6.2.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-react-views": "^0.11.0",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.11.1",
+    "html-to-text": "^8.0.0",
+    "juice": "^8.0.0",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.1",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-engine": "^4.5.1",
+    "sequelize": "^6.6.2",
+    "shortid": "^2.2.16",
+    "slug": "^5.0.1",
+    "standard": "^16.0.3",
+    "sweetalert2": "^11.0.16"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
