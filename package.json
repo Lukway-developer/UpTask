@@ -39,7 +39,8 @@
     "shortid": "^2.2.16",
     "slug": "^5.0.1",
     "standard": "^16.0.3",
-    "sweetalert2": "^11.0.16"
+    "sweetalert2": "^11.0.16",
+    "webpack": "^5.39.0"
   },
   "eslintConfig": {
     "extends": [
@@ -50,7 +51,6 @@
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
     "babel-loader": "^8.2.2",
-    "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2"
   }
 }
