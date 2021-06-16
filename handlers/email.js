@@ -8,11 +8,17 @@ const emailConfig = require('../config/email')
 exports.sendEmail = async (options) => {
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
-    host: emailConfig.host,
-    port: emailConfig.port,
+    service: 'gmail',
     auth: {
+      type: 'OAuth2',
       user: emailConfig.user,
-      pass: emailConfig.password
+      clientId: emailConfig.clientId,
+      clientSecret: emailConfig.clientSecret,
+      refreshToken: emailConfig.refreshToken,
+      accessToken: emailConfig.accessToken
+    },
+    tls: {
+      rechazarUnauthorized: false
     }
   })
 
@@ -21,7 +27,6 @@ exports.sendEmail = async (options) => {
 
   // send mail with defined transport object
   const info = await transporter.sendMail({
-
     from: 'UpTask ✅ <no-reply@uptask.com>',
     to: options.user.email,
     subject: options.subject,

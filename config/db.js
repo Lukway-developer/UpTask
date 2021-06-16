@@ -1,5 +1,6 @@
 const { Sequelize } = require('sequelize')
 require('dotenv').config()
+
 const database = new Sequelize(
   process.env.BD_NAME,
   process.env.BD_USER,
