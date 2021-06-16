@@ -5,7 +5,12 @@ exports.home = async (req, res) => {
   const userId = req.user.id
   const projects = await Projects.findAll({ where: { userId } })
 
-  const pendingTasks = await Tasks.findAll({ where: { state: 0 } })
+  const pendingTasks = await Tasks.findAll({
+    where: {
+      state: 0,
+      projectId: projects.map(project => project.id)
+    }
+  })
 
   res.render('Home', {
     namePage: 'Home',
